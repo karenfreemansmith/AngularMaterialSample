@@ -12,6 +12,7 @@ var http_1 = require('@angular/http');
 var animations_1 = require('@angular/platform-browser/animations');
 var material_1 = require('@angular/material');
 var flex_layout_1 = require('@angular/flex-layout');
+require('hammerjs');
 var app_component_1 = require('./app.component');
 var AppModule = (function () {
     function AppModule() {
@@ -25,9 +26,9 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                animations_1.BrowserAnimationsModule,
                 material_1.MaterialModule,
-                flex_layout_1.FlexLayoutModule
+                flex_layout_1.FlexLayoutModule,
+                animations_1.BrowserAnimationsModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
