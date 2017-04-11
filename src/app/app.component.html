@@ -3,9 +3,21 @@
         <span>Angular Material</span>
     </md-toolbar>
     
-    <md-sidenav-container>
+    <md-sidenav-container fxFlex>
         <md-sidenav mode="side" opened>
-            sidenav
+          <md-tab-group>
+            <md-tab label="Users">
+              <md-nav-list>
+                <md-list-item *ngFor="let user of users" (click)="selectedUser = user">
+                  <md-icon svgIcon="avatars:{{user.avatar}}" class="avatar"></md-icon>
+                  <span>{{user.name}}</span>
+                </md-list-item>
+              </md-nav-list>
+            </md-tab>
+            <md-tab label="Settings">
+              <span>Settings</span>
+            </md-tab>
+          </md-tab-group>
         </md-sidenav>
         <div class="content">
             Page Content
